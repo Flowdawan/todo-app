@@ -2,16 +2,15 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: todo-app
+    app: todo-app-fm-new
   name: todo-svc
-  namespace: todo-app-99
+  namespace: todo-app-fm-new
 spec:
   type: NodePort
   ports:
   - name: todo-svc
     port: 3000
     targetPort: 3000
-    nodePort: 31099
+    nodePort: 31319
   selector:
-    app: todo-app
-  
+    app: todo-app-fm-new
